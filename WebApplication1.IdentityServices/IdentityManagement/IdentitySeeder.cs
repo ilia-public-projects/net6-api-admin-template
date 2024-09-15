@@ -69,8 +69,8 @@ namespace WebApplication1.IdentityServices.IdentityManagement
                 {
                     Name = "Admin",
                     IsActive = true,
-                    Email = "iliadev@yahoo.com",
-                    PasswordHash = BCryptNet.HashPassword("P@ssw0rd!")
+                    Email = "email@email.com",
+                    PasswordHash = BCryptNet.HashPassword("password")
                 };
 
                 var adminRole = new Role() { Name = "Admin", Description = "Global access" };
