@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- These two settings are added to allow generating documentation for Swagger (https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-5.0&tabs=visual-studio) -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApplication.Models\WebApplication1.Models.csproj" />
+    <ProjectReference Include="..\WebApplication1.Common\WebApplication1.Common.csproj" />
+    <ProjectReference Include="..\WebApplication1.Core\WebApplication1.Core.csproj" />
+    <ProjectReference Include="..\WebApplication1.EntityFramework\WebApplication1.EntityFramework.csproj" />
+    <ProjectReference Include="..\WebApplication1.IdentityServices\WebApplication1.IdentityServices.csproj" />
+    <ProjectReference Include="..\WebApplication1.Services\WebApplication1.Services.csproj" />
+    <ProjectReference Include="..\WebApplication1.SignalR\WebApplication1.SignalR.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTO\Admin\AuthorisationGroup\" />
+    <Folder Include="DTO\Admin\User\" />
+  </ItemGroup>
+
+</Project>
